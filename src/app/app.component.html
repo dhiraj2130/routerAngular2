@@ -2,7 +2,15 @@
   {{title}}
 </h1>
 <nav>
-  <a routerLink="">home</a>
-  <a routerLink="contacts">contacts</a>
+  <a routerLink=""
+     routerLinkActive="active"
+     [routerLinkActiveOptions]="{exact:true}"
+  >home</a>
+  <a routerLink="contacts/1"
+
+     [routerLinkActiveOptions]="{exact:true}"
+     routerLinkActive="active">contact one</a>
+  <a routerLink="contacts" routerLinkActive="active"
+     [routerLinkActiveOptions]="{exact:true}" >contact</a>
 </nav>
 <router-outlet></router-outlet>

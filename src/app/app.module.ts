@@ -5,16 +5,11 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import  appRoutes  from './app.routes';
-import { ContactsComponent } from "./contacts/contacts.component";
-
-
-
-
 
 
 @NgModule({
   declarations: [
-    AppComponent,ContactsComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

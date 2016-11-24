@@ -58,5 +58,21 @@ var meanReducer = function(accumulator,item,index,meanArray){
 var meanResult = mapArray.reduce(meanReducer,0);
 console.log(meanResult);
 
+var starwars = [{
+    name:"star1",
+    address:['add1','add2','add3']
+},{
+    name:"star2",
+    address:['add1','add2','add4']
+}];
+
+var starwarreducer = function(accumulator,item){
+    return accumulator;
+}
+
+
+
+
+
 
 

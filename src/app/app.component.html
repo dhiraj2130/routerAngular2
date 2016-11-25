@@ -14,3 +14,9 @@
      [routerLinkActiveOptions]="{exact:true}" >contact</a>
 </nav>
 <router-outlet></router-outlet>
+{{ title }}
+<div *ngFor="let message of _dataService.messages">
+     {{ message.text}}</div>
+<app-simple-form-component *ngFor="let message of _dataService.messages"
+        [inputText]="message.text"
+(update)="onHello(message.id,$event.text)"></app-simple-form-component>

@@ -5,11 +5,14 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import  appRoutes  from './app.routes';
+import { SimpleFormComponentComponent } from './simple-form-component/simple-form-component.component';
+import {DataServiceService} from "./data-service.service";
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SimpleFormComponentComponent
   ],
   imports: [
     BrowserModule,
@@ -17,7 +20,7 @@ import  appRoutes  from './app.routes';
     HttpModule,
     appRoutes
   ],
-  providers: [],
+  providers: [DataServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

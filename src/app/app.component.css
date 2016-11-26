@@ -5,3 +5,7 @@ a.active{
     font-weight: bold;
     color:green;
 }
+
+app-simple-form-component {
+    margin-bottom: 10px;
+}

@@ -20,3 +20,11 @@
 <app-simple-form-component *ngFor="let message of _dataService.messages"
         [inputText]="message.text"
 (update)="onHello(message.id,$event.text)"></app-simple-form-component>
+
+
+<button (click)="click$.next()">Update</button>
+<h1>{{ clock | async | date:'yMMMMEEEEdjms'}}</h1>
+
+<input type="text">
+<button (click)="addPerson()">Add Person</button>
+<li>{{ people | json }}</li>

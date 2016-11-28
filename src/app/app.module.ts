@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import  appRoutes  from './app.routes';
 import { SimpleFormComponentComponent } from './simple-form-component/simple-form-component.component';
 import {DataServiceService} from "./data-service.service";
+import { StoreModule } from '@ngrx/Store';
+import { people } from './people';
 
 
 @NgModule({
@@ -18,7 +20,8 @@ import {DataServiceService} from "./data-service.service";
     BrowserModule,
     FormsModule,
     HttpModule,
-    appRoutes
+    appRoutes,
+    StoreModule.provideStore({people})
   ],
   providers: [DataServiceService],
   bootstrap: [AppComponent]

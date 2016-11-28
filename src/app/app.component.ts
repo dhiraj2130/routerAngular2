@@ -12,6 +12,7 @@ import { Store } from '@ngrx/Store';
 
 import { people } from './people';
 
+//http://onehungrymind.com/build-better-angular-2-application-redux-ngrx/
 
 @Component({
   selector: 'app-root',

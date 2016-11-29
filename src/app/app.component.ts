@@ -10,6 +10,10 @@ import 'rxjs/add/operator/scan';
 import { Subject } from "rxjs/Subject"
 import { Store } from '@ngrx/Store';
 
+import { ItemsService, AppStore } from './reducers';
+
+import { Item } from './models/items.model';
+
 import { people } from './people';
 
 //http://onehungrymind.com/build-better-angular-2-application-redux-ngrx/
@@ -48,7 +52,18 @@ export class AppComponent {
             attending:false
         }}))
     }
-  constructor(dataService:DataServiceService,private _store: Store<any>){
+
+
+    items: Observable<Array<Item>>;
+    selectedItem : Observable<Item>;
+
+  constructor(dataService:DataServiceService,private _store: Store<any>,
+              private itemsService : ItemsService, private store: Store<AppStore>){
+
+
+   this.items = itemsService.items;
+       // this.selectedItem = store.select('selectedItem');
+      this.selectedItem = store.map(state => state['selectedItem']);
 
       _store.select('people')
           .subscribe(people => {
@@ -72,6 +87,12 @@ date.setSeconds(date.getSeconds() + 1);
    // this.clock.subscribe(console.log.bind(console));
     this._dataService = dataService;
   }
+
+
+//     constructor(private itemsService : ItemsService, private store: Store<AppStore>){
+// this.items = itemsService.items;
+//         this.selectedItem = store.select('selectedItem');
+//     };
 
 }
 

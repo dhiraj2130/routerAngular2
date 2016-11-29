@@ -28,3 +28,10 @@
 <input type="text">
 <button (click)="addPerson()">Add Person</button>
 <li>{{ people | json }}</li>
+
+
+
+
+<div *ngFor=" let item of items | async ">
+  {{ item.id }}
+</div>

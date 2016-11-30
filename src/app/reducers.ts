@@ -42,3 +42,7 @@ export class ItemsService {
 //         this.selectedItem = store.select('selectedItem');
 //     };
 // }
+//
+// export const clock =(state : any = new Date()) => {
+//     return state;
+// }

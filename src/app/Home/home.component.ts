@@ -17,9 +17,10 @@ import 'rxjs/add/operator/mapTo';
 
 @Component({
     template:` I am component one
- <button (click)="click$.next()">update clock </button>
+ <input #inputNum type="number" value=""0">
+ <button (click)="click$.next(inputNum)">update clock </button>
  <h1>clock : {{ clock | async }}</h1>
-    <h1>store cock : {{ storeclock | async }}</h1>`
+    <h1>store clock : {{ storeclock | async }}</h1>`
 })
 export class HomeComponent{
     click$ = new Subject();
